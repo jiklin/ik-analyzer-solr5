@@ -63,21 +63,23 @@
 			<version>1.2.16</version>
 		</dependency>
 
-
 	</dependencies>
-
-	<!-- <build>
+	
+	<build>
 		<plugins>
 			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
 				<configuration>
-					<target>${javac.src.version}</target>
-					<source>${javac.target.version}</source>
+					<excludes>
+						<exclude>IKAnalyzer.cfg.xml</exclude>
+						<exclude>custom/**</exclude>
+					</excludes>
 				</configuration>
-				<version>${maven.compiler.plugin.version}</version>
 			</plugin>
 		</plugins>
-	</build> -->
+	</build>
 
 </project>
   
